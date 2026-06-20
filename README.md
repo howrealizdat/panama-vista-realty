@@ -4,6 +4,8 @@ A full-stack AI concierge for a Panama luxury-real-estate site: live property li
 
 ▶ **Live demo:** https://luxury-tartufo-ffc74b.netlify.app *(password-gated — access code available on request)*
 
+> 🍔 **Same architecture, different industry:** this secure serverless AI-concierge pattern also powers [Detroit's Finest Burgers](https://detroits-finest-burgers.netlify.app), a restaurant concierge — proof the approach transfers cleanly across domains. *(Demo access on request.)*
+
 ## Architecture highlights
 
 - **Secure key handling.** All Anthropic API calls route through a Netlify serverless function (`netlify/functions/chat.js`) that injects the key from a server-side environment variable (`process.env.ANTHROPIC_API_KEY`). The key never appears in client-side source. A redirect maps `/api/chat` → the function.
